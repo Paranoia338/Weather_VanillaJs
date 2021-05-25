@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: rgb(253, 244, 247);
+            background: linear-gradient(290deg, rgba(253, 244, 247, 1) 0%, rgba(236, 237, 253, 1) 89%);
+        }
+        fieldset {
+            width: 400px;
+            border-radius: 4px;
+            /* pentru a centra pe mijloc, margini 0 sus jos, dreapta stanga alege browser-ul prin auto*/
+            margin: 0 auto;
+        }
+        label {
+            /pt a avea label si input pe 2 coloane/
+            display: inline-block;
+            width: 200px;
+            font-size: 14px;
+            color: #302E45;
+        }
+        input[type="text"] {
+            color: #302E45;
+            font-family: inherit;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 3px solid #EAEAF6;
+            width: 250px;
+        }
+        .outputDiv {
+            font-size: 14px;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+            text-align: center;
+        }
+        h1 { 
+            text-align: center;
+        }
+        button {
+            background: rgb(255, 255, 255);
+            color: #302E45;
+            font-weight: bold;
+            padding: 10px 25px;
+            font-family: inherit;
+            font-size: 15px;
+        }
+        button:hover {
+            background-color: #EAEFFC;
+            color: #283265;
+            transition: all .3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div id="input">
+        <input type="text" id="cityInput">
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    <fieldset>
+    <div class="outputDiv"></div>
+        <p id="cityName">oras</p>
+        <h1 id="temperature">temp</h1>
+        <p id="description">desc</p>
+    </fieldset>
+    <script src="WeatherApp.js"></script>   
+</body>
+</html>

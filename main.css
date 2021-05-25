@@ -1,0 +1,205 @@
+#container {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 200px;
+    background: linear-gradient(290deg, rgb(255, 30, 105) 0%, rgb(7, 23, 250) 89%);
+    /* background-color:rgb(20, 104, 230); */
+}
+
+#content {
+    position: relative; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    background-color: transparent;
+    /* background-color:rgb(99, 171, 230); */
+    padding: 30px;
+
+    /* border: 5px solid red; */
+
+    display:flex;
+    flex-direction: column;
+}
+
+#prim_plan {
+    padding-top: 30px;
+    /* background-color: grey; */
+    margin-bottom: 30px;
+    height: 55%;
+    /* border: 5px solid red; */
+}
+
+#control {
+    text-align: center;
+    /* background-color: coral; */
+    height: 20%;
+    /* border: 5px solid red; */
+}
+
+#oras {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    /* border: 5px solid red; */
+    margin-bottom: 20px;
+}
+
+#imagine {
+    /* border: 5px solid red; */
+    text-align: center;
+    /* height: 150px; */
+}
+
+#poza {
+    height: 150px;
+}
+
+#temperatura {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* border: 5px solid red; */
+}
+
+#grade {
+    min-width: 18%;
+    font-size: 70px;
+    /* margin-right: 0px; */
+    /* border: 5px solid red; */
+}
+
+#switch {
+    border-left: 16px;
+    /* border: 5px solid red; */
+}
+
+#buton {
+    display: block;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    /* font-weight: bold; */
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+
+#descriere {
+    text-align: center;
+    font-size:30px;
+    color: white;
+    /* border: 5px solid red; */
+    margin-top: 10px;
+}
+
+.spatiu {
+    min-height: 30px;
+    /* border: 5px solid black; */
+}
+
+#directie_vant {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:18px;
+    color: white;
+}
+
+#viteza_vant {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:18px;
+    color: white;
+}
+
+#umiditate {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:18px;
+    color: white;
+}
+
+#rasarit {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:16px;
+    color: white;
+}
+
+#apus {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:16px;
+    color: white;
+}
+
+#garderoba {
+    text-align: center;
+    /* border: 5px solid red; */
+    font-size:18px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* 
+#zi_saptamana {
+    text-align: left;
+    font-size: 28px;
+    color: rgb(219, 216, 216);
+    padding-left: 100px;
+}
+
+#luna_zi {
+    text-align: left;
+    font-size: 50px;
+    color: white;
+    padding-left: 100px;
+} */
+
+#search_bar {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    /* border: 5px solid red; */
+}
+
+#buton_cautare_div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+input {
+    border: none;
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    /* display: block; */
+    max-width: 400px;
+    height: 60%;
+    font-size: 20px;
+}
+
+#buton_cautare {
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border: none;
+    width: 100px;
+    height: 63%;
+    /* display: block; */
+    /* margin: 0; */
+    font-size: 18px;
+    /* color: white; */
+    
+}

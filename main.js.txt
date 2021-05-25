@@ -1,0 +1,50 @@
+const cityInput = document.getElementById('cityInput');
+const submitButton = document.getElementById('submit');
+const temperatureDisplay = document.getElementById('temperature');
+const cityDisplay = document.getElementById('cityName');
+const descriptionDisplay = document.getElementById('description');
+const outputDiv = document.getElementById('outputDiv');
+
+let city, description, temperature;
+
+cityInput.addEventListener('change', (ev) => {
+    city = ev.target.value;
+});
+
+submitButton.addEventListener('click', () => {
+    let api = `https://api.weatherbit.io/v2.0/current?city=${city}
+    &key=468da252d9834c2f944920f4d770370f`;
+    fetch(api) 
+    .then( function (response) {
+        let data = response.json();
+        return data;
+    })
+    .then ( function (data) {
+        //datele efective
+        city = data.data[0].city_name;
+        console.log(city);
+        description = data.data[0].weather.description;
+        console.log(description);
+        temperature = data.data[0].temp;
+        console.log(temperature);
+
+        //display data
+        cityDisplay.innerHTML = `${data.data[0].city_name}`;
+        descriptionDisplay.innerHTML = `${data.data[0].weather.description}`;
+        temperatureDisplay.innerHTML = `${data.data[0].temp}°C`;
+
+        //conversie temperatura
+        let temperatureUnit = "celsius";
+        temperatureDisplay.addEventListener('click', ()=> {
+            let fahrenheit;
+            if ( temperatureUnit == "celsius") {
+                fahrenheit = Math.round((temperature *9 /5) +32);
+                temperatureDisplay.innerHTML = fahrenheit + "°F";
+                temperatureUnit = "fahrenheit";
+            } else {
+                temperatureDisplay.innerHTML = temperature + "°C";
+                temperatureUnit = "celsius";
+            } 
+        });
+    })      
+})
